@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pixel n Plate - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="site-brand">
+    <img src="images/logo.jpg" alt="Pixel n Plate logo">
+    <strong>Pixel n Plate</strong>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="games.html">Games</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+</header>
+
+<section class="hero" style="background-image: url('images/home-bg.png');">
+  <div class="overlay">
+    <h1>Welcome to Pixel n Plate Café</h1>
+    <p>Eat • Play • Celebrate — Café + Game zone + Events under one roof in Ahmedabad</p>
+    <a class="button" href="menu.html">Explore Menu</a>
+    <a class="button secondary" href="games.html">Explore Games</a>
+    <a class="button secondary" href="events.html">Explore Events</a>
+    <div style="margin-top:18px;">
+      <!-- background music (optional) -->
+      <audio id="bgm" loop>
+        <source src="images/bg-music.mp3" type="audio/mpeg">
+      </audio>
+      <button onclick="document.getElementById('bgm').play()" class="button secondary" style="margin-top:12px;">Play BGM</button>
+      <button onclick="document.getElementById('bgm').pause()" class="button secondary" style="margin-top:12px;">Pause BGM</button>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <h2 style="text-align:center">Our Highlights</h2>
+  <div class="grid-3" style="margin-top:22px;">
+    <div class="card"><h3>Signature Café</h3><p>Multibrand food stalls, fresh & affordable.</p></div>
+    <div class="card"><h3>Game Zone</h3><p>VR, Bowling, Pool, Go Karting & more.</p></div>
+    <div class="card"><h3>Events</h3><p>Open mic, cooking demos, workshops & birthdays.</p></div>
+  </div>
+</div>
+
+<footer class="site-foot">
+  <p>© 2025 Pixel n Plate • Ahmedabad • pixelnplate@gmail.com • +91 99133 71789</p>
+</footer>
+
+</body>
+</html>

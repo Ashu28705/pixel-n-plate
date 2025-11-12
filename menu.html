@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Menu - Pixel n Plate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
+  <nav class="nav-links"><a href="index.html">Home</a><a href="games.html">Games</a><a href="events.html">Events</a><a href="contact.html">Contact</a></nav>
+</header>
+
+<section class="hero" style="background-image:url('images/menu-bg.jpg'); height:260px;">
+  <div class="overlay"><h1>Food Court - Menu</h1><p>Click a shop to view its items</p></div>
+</section>
+
+<div class="container">
+  <!-- Shop 1 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu1')">🍕 London Yard Pizza <span>+</span></button>
+    <div id="menu1" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Margherita Pizza <strong style="color:#ff8a00; float:right">₹199</strong></li>
+            <li>Farmhouse Pizza <strong style="color:#ff8a00; float:right">₹299</strong></li>
+            <li>Cheese Burst <strong style="color:#ff8a00; float:right">₹349</strong></li>
+          </ul>
+        </div>
+        <img src="images/pizza.jpg" alt="pizza">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 2 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu2')">🥪 Mahalaxmi Pavbhaji & Sandwich <span>+</span></button>
+    <div id="menu2" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Special Pav Bhaji <strong style="color:#ff8a00; float:right">₹120</strong></li>
+            <li>Cheese Pav Bhaji <strong style="color:#ff8a00; float:right">₹150</strong></li>
+            <li>Grilled Sandwich <strong style="color:#ff8a00; float:right">₹100</strong></li>
+          </ul>
+        </div>
+        <img src="images/pavbhaji.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 3 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu3')">🥞 Balan Dosa <span>+</span></button>
+    <div id="menu3" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Plain Dosa <strong style="color:#ff8a00; float:right">₹80</strong></li>
+            <li>Masala Dosa <strong style="color:#ff8a00; float:right">₹120</strong></li>
+            <li>Cheese Dosa <strong style="color:#ff8a00; float:right">₹160</strong></li>
+          </ul>
+        </div>
+        <img src="images/dosa.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 4 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu4')">🥤 Shakemaker <span>+</span></button>
+    <div id="menu4" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Oreo Shake <strong style="color:#ff8a00; float:right">₹150</strong></li>
+            <li>Strawberry Shake <strong style="color:#ff8a00; float:right">₹130</strong></li>
+            <li>Cold Coffee <strong style="color:#ff8a00; float:right">₹120</strong></li>
+          </ul>
+        </div>
+        <img src="images/shake.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 5 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu5')">🥟 Wow Momos <span>+</span></button>
+    <div id="menu5" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Steamed Momos <strong style="color:#ff8a00; float:right">₹100</strong></li>
+            <li>Fried Momos <strong style="color:#ff8a00; float:right">₹120</strong></li>
+            <li>Cheese Momos <strong style="color:#ff8a00; float:right">₹150</strong></li>
+          </ul>
+        </div>
+        <img src="images/momo.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 6 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu6')">🍹 Sodawala Mocktail & Shots <span>+</span></button>
+    <div id="menu6" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Lemon Mojito <strong style="color:#ff8a00; float:right">₹90</strong></li>
+            <li>Fruit Punch <strong style="color:#ff8a00; float:right">₹110</strong></li>
+            <li>Energy Shots <strong style="color:#ff8a00; float:right">₹80</strong></li>
+          </ul>
+        </div>
+        <img src="images/mocktail.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 7 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu7')">🍦 Havmor Icecream <span>+</span></button>
+    <div id="menu7" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Chocolate Cone <strong style="color:#ff8a00; float:right">₹60</strong></li>
+            <li>Belgian Waffle + Icecream <strong style="color:#ff8a00; float:right">₹150</strong></li>
+            <li>Family Pack 1L <strong style="color:#ff8a00; float:right">₹300</strong></li>
+          </ul>
+        </div>
+        <img src="images/icecream.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 8 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu8')">🥘 Amritsari Chole Kulche <span>+</span></button>
+    <div id="menu8" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Chole Kulcha (Single) <strong style="color:#ff8a00; float:right">₹80</strong></li>
+            <li>Chole Kulcha (Double) <strong style="color:#ff8a00; float:right">₹150</strong></li>
+            <li>Cheese Kulcha <strong style="color:#ff8a00; float:right">₹170</strong></li>
+          </ul>
+        </div>
+        <img src="images/chole.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 9 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu9')">🍔 Patti Vadapav <span>+</span></button>
+    <div id="menu9" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Classic Vada Pav <strong style="color:#ff8a00; float:right">₹40</strong></li>
+            <li>Cheese Vada Pav <strong style="color:#ff8a00; float:right">₹60</strong></li>
+            <li>Jain Vada Pav <strong style="color:#ff8a00; float:right">₹50</strong></li>
+          </ul>
+        </div>
+        <img src="images/vadapav.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- Shop 10 -->
+  <div class="shop">
+    <button class="shop-title" onclick="toggleMenu('menu10')">🍵 Kittley Tea Stall <span>+</span></button>
+    <div id="menu10" class="menu-items">
+      <div style="overflow:hidden">
+        <div style="width:58%; display:inline-block; vertical-align:top;">
+          <ul>
+            <li>Masala Chai <strong style="color:#ff8a00; float:right">₹30</strong></li>
+            <li>Adrak Chai <strong style="color:#ff8a00; float:right">₹40</strong></li>
+            <li>Lemon Tea <strong style="color:#ff8a00; float:right">₹35</strong></li>
+          </ul>
+        </div>
+        <img src="images/tea.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="site-foot">© 2025 Pixel n Plate</footer>
+
+<script>
+function toggleMenu(id){
+  // close all
+  document.querySelectorAll('.menu-items').forEach(m => {
+    if(m.id !== id) m.style.display = 'none';
+  });
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+</body>
+</html>

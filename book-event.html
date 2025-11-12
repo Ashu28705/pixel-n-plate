@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Book Event - Pixel n Plate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-nav">
+  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
+  <nav class="nav-links"><a href="index.html">Home</a><a href="events.html">Events</a></nav>
+</header>
+
+<div class="container" style="padding-top:30px;">
+  <div class="form-card">
+    <h2 style="text-align:center">Book Your Event</h2>
+    <form id="bookingForm" action="book_event.php" method="post">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" type="tel" required>
+
+      <label for="event">Event</label>
+      <select id="event" name="event" required>
+        <option value="">-- Choose an Event --</option>
+        <option value="Gaming Competition">Gaming Competition</option>
+        <option value="Open Mic">Open Mic</option>
+        <option value="Cooking Demo Nights">Cooking Demo Nights</option>
+        <option value="Workshops">Workshops</option>
+        <option value="Birthday Celebrations">Birthday Celebrations</option>
+        <option value="Community Meetups">Community Meetups</option>
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input id="date" name="date" type="date" required>
+
+      <label for="notes">Additional Notes</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <button type="submit" class="button" style="width:100%; margin-top:12px;">Submit Booking</button>
+    </form>
+  </div>
+</div>
+
+<footer class="site-foot">© 2025 Pixel n Plate</footer>
+
+<script>
+// auto-select event if ?event=... is present in URL
+const params = new URLSearchParams(window.location.search);
+const e = params.get('event');
+if(e){
+  const sel = document.getElementById('event');
+  for(let i=0;i<sel.options.length;i++){
+    if(sel.options[i].value === e) { sel.selectedIndex = i; break; }
+  }
+}
+</script>
+</body>
+</html>
