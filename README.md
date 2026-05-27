@@ -61,6 +61,8 @@ Pixel n Plate aims to create a digital presence for **Ahmedabad’s first Café 
 - `contacts` – Stores contact form messages  
 - `menu_items` (optional) – For dynamic menu management  
 
+To create the database and tables automatically, import `setup.sql` into phpMyAdmin or run it from your MySQL client.
+
 ---
 
 ## 📂 Project Structure

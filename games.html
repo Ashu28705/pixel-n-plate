@@ -1,31 +1,46 @@
-<!doctype html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games - Pixel n Plate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-nav">
-  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="events.html">Events</a></nav>
-</header>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">PIXEL n PLATE</div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">=</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="games.html" class="active">Games</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <a class="cta-btn" href="book-event.html">Book Now</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">DL</button>
+  </div>
+</nav>
 
-<section class="hero" style="background-image:url('images/games.png'); height:240px;">
-  <div class="overlay"><h1>Games</h1><p>Enjoy bowling, pool, snooker, go-carting, VR and slingshot</p></div>
+<section class="hero hero-secondary"><div class="hero-content" data-scroll><h1>Gaming Arena</h1><p>Pro-level games, immersive setups, and instant booking.</p></div></section>
+
+<section>
+  <div class="container">
+    <div class="games-grid">
+      <article class="game-card" data-scroll><div class="game-media">VR</div><div class="game-info"><h3>VR Arena</h3><p>Immersive multiplayer VR battles.</p><div class="meta-row"><span>Duration: 30-60 min</span><span>Difficulty: Medium</span><span>Age: 12+</span><span>INR 449</span></div><button class="game-btn" onclick="bookGame('VR Arena')">Book Session</button></div></article>
+      <article class="game-card" data-scroll><div class="game-media">BL</div><div class="game-info"><h3>Bowling</h3><p>Professional lanes with smart scoring.</p><div class="meta-row"><span>Duration: 45 min</span><span>Difficulty: Easy</span><span>Age: 8+</span><span>INR 399</span></div><button class="game-btn" onclick="bookGame('Bowling')">Book Session</button></div></article>
+      <article class="game-card" data-scroll><div class="game-media">PL</div><div class="game-info"><h3>Pool</h3><p>Tournament-grade tables and cues.</p><div class="meta-row"><span>Duration: 60 min</span><span>Difficulty: Medium</span><span>Age: 14+</span><span>INR 299</span></div><button class="game-btn" onclick="bookGame('Pool')">Book Session</button></div></article>
+      <article class="game-card" data-scroll><div class="game-media">GK</div><div class="game-info"><h3>Go-Karting</h3><p>Indoor race track with lap analytics.</p><div class="meta-row"><span>Duration: 20 min</span><span>Difficulty: Hard</span><span>Age: 16+</span><span>INR 699</span></div><button class="game-btn" onclick="bookGame('Go-Karting')">Book Session</button></div></article>
+      <article class="game-card" data-scroll><div class="game-media">TR</div><div class="game-info"><h3>Trampoline</h3><p>High-energy jump arena for groups.</p><div class="meta-row"><span>Duration: 30 min</span><span>Difficulty: Easy</span><span>Age: 6+</span><span>INR 249</span></div><button class="game-btn" onclick="bookGame('Trampoline')">Book Session</button></div></article>
+      <article class="game-card" data-scroll><div class="game-media">CN</div><div class="game-info"><h3>Console Zone</h3><p>PS5, Xbox and esports-ready setups.</p><div class="meta-row"><span>Duration: 60 min</span><span>Difficulty: Mixed</span><span>Age: 10+</span><span>INR 349</span></div><button class="game-btn" onclick="bookGame('Console Gaming')">Book Session</button></div></article>
+    </div>
+  </div>
 </section>
 
-<div class="container">
-  <div class="games-list">
-    <div class="card"><img src="images/bowling.jpg" style="width:100%; border-radius:8px"><h3>Bowling</h3><p>Modern lanes for friendly tournaments</p></div>
-    <div class="card"><img src="images/pool.jpg" style="width:100%; border-radius:8px"><h3>Pool & Snooker</h3><p>Pro tables and cues</p></div>
-    <div class="card"><img src="images/gocarting.jpg" style="width:100%; border-radius:8px"><h3>Go Carting</h3><p>Indoor / outdoor kart track</p></div>
-    <div class="card"><img src="images/vr.jpg" style="width:100%; border-radius:8px"><h3>VR Games</h3><p>Immersive experiences and simulators</p></div>
-    <div class="card"><img src="images/slingshot.jpg" style="width:100%; border-radius:8px"><h3>Sling Shot</h3><p>Fun reflex-based challenge</p></div>
-    <div class="card"><img src="images/trampoline.jpg" style="width:100%; border-radius:8px"><h3>Trampoline</h3><p>Fun for the kids</p></div>
-  </div>
-</div>
-
-<footer class="site-foot">© 2025 Pixel n Plate</footer>
+<footer><div class="container"><div class="footer-divider"><p>&copy; 2026 Pixel n Plate</p></div></div></footer>
+<button class="back-to-top" onclick="scrollToTop()">UP</button>
+<script src="main.js"></script>
 </body>
 </html>

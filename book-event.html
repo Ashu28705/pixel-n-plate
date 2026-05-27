@@ -1,63 +1,68 @@
-<!doctype html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Event - Pixel n Plate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-nav">
-  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="events.html">Events</a></nav>
-</header>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">PIXEL n PLATE</div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">=</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">DL</button>
+  </div>
+</nav>
 
-<div class="container" style="padding-top:30px;">
-  <div class="form-card">
-    <h2 style="text-align:center">Book Your Event</h2>
-    <form id="bookingForm" action="book_event.php" method="post">
-      <label for="name">Full Name</label>
-      <input id="name" name="name" required>
+<section class="hero hero-secondary"><div class="hero-content"><h1>Book Your Experience</h1><p>Fast 3-step booking with live validation-friendly flow.</p></div></section>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required>
+<section>
+  <div class="container">
+    <form id="bookingWizard" class="form-card" action="book_event.php" method="post">
+      <h2>Event Booking</h2>
+      <div class="form-progress"><span></span></div>
 
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" required>
+      <div class="step active">
+        <label for="name">Full Name</label><input id="name" name="name" required>
+        <label for="email">Email</label><input id="email" name="email" type="email" required>
+        <label for="phone">Phone</label><input id="phone" name="phone" type="tel" required>
+        <button type="button" class="button next-step" style="margin-top:12px;">Next</button>
+      </div>
 
-      <label for="event">Event</label>
-      <select id="event" name="event" required>
-        <option value="">-- Choose an Event --</option>
-        <option value="Gaming Competition">Gaming Competition</option>
-        <option value="Open Mic">Open Mic</option>
-        <option value="Cooking Demo Nights">Cooking Demo Nights</option>
-        <option value="Workshops">Workshops</option>
-        <option value="Birthday Celebrations">Birthday Celebrations</option>
-        <option value="Community Meetups">Community Meetups</option>
-      </select>
+      <div class="step">
+        <label for="event">Select Event</label>
+        <select id="event" name="event" required>
+          <option value="">Choose an event</option>
+          <option>Gaming Tournament</option>
+          <option>Open Mic Night</option>
+          <option>Birthday Package</option>
+          <option>Community Meetup</option>
+        </select>
+        <label for="date">Preferred Date</label><input id="date" name="date" type="date" required>
+        <label for="notes">Additional Notes</label><textarea id="notes" name="notes" placeholder="Tell us your special requests"></textarea>
+        <button type="button" class="button prev-step" style="margin-top:12px;">Back</button>
+        <button type="button" class="button next-step" style="margin-top:12px;">Next</button>
+      </div>
 
-      <label for="date">Preferred Date</label>
-      <input id="date" name="date" type="date" required>
-
-      <label for="notes">Additional Notes</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="submit" class="button" style="width:100%; margin-top:12px;">Submit Booking</button>
+      <div class="step">
+        <p style="color:var(--text-1);">Review details and confirm your booking.</p>
+        <button type="button" class="button prev-step" style="margin-top:12px;">Back</button>
+        <button type="submit" class="button" style="margin-top:12px;">Confirm Booking</button>
+      </div>
     </form>
   </div>
-</div>
+</section>
 
-<footer class="site-foot">© 2025 Pixel n Plate</footer>
-
-<script>
-// auto-select event if ?event=... is present in URL
-const params = new URLSearchParams(window.location.search);
-const e = params.get('event');
-if(e){
-  const sel = document.getElementById('event');
-  for(let i=0;i<sel.options.length;i++){
-    if(sel.options[i].value === e) { sel.selectedIndex = i; break; }
-  }
-}
-</script>
+<footer><div class="container"><div class="footer-divider"><p>&copy; 2026 Pixel n Plate</p></div></div></footer>
+<script src="main.js"></script>
 </body>
 </html>

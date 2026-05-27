@@ -1,32 +1,67 @@
-<!doctype html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback - Pixel n Plate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-nav">
-  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav>
-</header>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">PIXEL n PLATE</div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">=</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html" class="active">Feedback</a></li>
+    </ul>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">DL</button>
+  </div>
+</nav>
 
-<div class="container" style="padding-top:24px;">
-  <div class="form-card">
-    <h2>We Value Your Feedback</h2>
-    <form action="feedback.php" method="post" enctype="text/plain">
-      <label>Name</label><input name="name" required>
-      <label>Email</label><input name="email" type="email" required>
+<section class="hero hero-secondary"><div class="hero-content"><h1>Share Your Feedback</h1><p>Your experience helps us improve every day.</p></div></section>
+
+<section>
+  <div class="container">
+    <form class="form-card" action="feedback.php" method="post">
+      <h3>Feedback Form</h3>
+      <label>Name</label>
+      <input name="name" required>
+
+      <label>Email</label>
+      <input name="email" type="email" required>
+
       <label>Rating</label>
-      <select name="rating" required>
-        <option value="">Select</option><option>5 - Excellent</option><option>4 - Good</option><option>3 - Average</option><option>2 - Poor</option><option>1 - Very Bad</option>
-      </select>
-      <label>Feedback</label><textarea name="message" required></textarea>
-      <button class="button" type="submit" style="width:100%; margin-top:12px;">Submit</button>
+      <div class="star-row">
+        <button type="button" aria-label="1 star">*</button>
+        <button type="button" aria-label="2 stars">*</button>
+        <button type="button" aria-label="3 stars">*</button>
+        <button type="button" aria-label="4 stars">*</button>
+        <button type="button" aria-label="5 stars">*</button>
+      </div>
+      <input id="ratingValue" name="rating" type="hidden" required>
+
+      <label>How did you feel?</label>
+      <div class="emoji-row">
+        <button type="button" class="emoji-btn" data-emoji="happy">Happy</button>
+        <button type="button" class="emoji-btn" data-emoji="excited">Excited</button>
+        <button type="button" class="emoji-btn" data-emoji="okay">Okay</button>
+        <button type="button" class="emoji-btn" data-emoji="bad">Bad</button>
+      </div>
+      <input id="emojiReaction" name="emoji" type="hidden">
+
+      <label>Feedback</label>
+      <textarea name="message" required></textarea>
+      <button class="button" type="submit" style="margin-top:12px;">Submit Feedback</button>
     </form>
   </div>
-</div>
+</section>
 
-<footer class="site-foot">© 2025 Pixel n Plate</footer>
+<footer><div class="container"><div class="footer-divider"><p>&copy; 2026 Pixel n Plate</p></div></div></footer>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,35 +1,43 @@
-<!doctype html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Events - Pixel n Plate</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-nav">
-  <div class="site-brand"><img src="images/logo.jpg" alt=""><strong>Pixel n Plate</strong></div>
-  <nav class="nav-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="games.html">Games</a></nav>
-</header>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">PIXEL n PLATE</div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">=</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+    <a class="cta-btn" href="book-event.html">Register</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">DL</button>
+  </div>
+</nav>
 
-<section class="hero" style="background-image:url('images/events-bg.jpg'); height:260px;">
-  <div class="overlay"><h1>Our Events</h1><p>Gaming competitions, Open Mic, Cooking demos & more</p></div>
-</section>
+<section class="hero hero-secondary"><div class="hero-content" data-scroll><h1>Upcoming Events</h1><p>Tournaments, open mic nights, birthday parties, and community meetups.</p></div></section>
 
-<div class="container">
-  <div class="card" style="text-align:left;">
-    <h3>🎮 Gaming Competition</h3><p>Multiplayer tournaments with prizes.</p>
-    <h3>🎤 Open Mic</h3><p>Music, comedy and poetry nights.</p>
-    <h3>🍳 Cooking Demo Nights</h3><p>Live chef demos & tastings.</p>
-    <h3>🛠️ Workshops</h3><p>Hands-on sessions and talks.</p>
-    <h3>🎂 Birthday Celebrations</h3><p>Book a party package for friends & family.</p>
-    <h3>🤝 Community Meetups</h3><p>Meetups, clubs & socials.</p>
-    <div class="center" style="margin-top:18px;">
-      <!-- single book now button -->
-      <a href="book-event.html" class="button">Book Now</a>
+<section>
+  <div class="container">
+    <div class="events-grid">
+      <article class="event-card" data-scroll><div class="event-banner">GT</div><div class="event-details"><h3>Gaming Tournament</h3><p class="event-meta">June 15, 2026 | Organizer: Pixel League | 8 seats left</p><div data-countdown="2026-06-15T10:00:00"></div><div style="margin-top:10px;"><a class="event-btn" href="book-event.html?event=Gaming Tournament">Register</a> <button class="event-btn" onclick="shareEvent('Gaming Tournament')">Share</button></div></div></article>
+      <article class="event-card" data-scroll><div class="event-banner">OM</div><div class="event-details"><h3>Open Mic Night</h3><p class="event-meta">May 30, 2026 | Organizer: Vibe Crew | 40 seats left</p><div data-countdown="2026-05-30T20:00:00"></div><div style="margin-top:10px;"><a class="event-btn" href="book-event.html?event=Open Mic Night">Register</a> <button class="event-btn" onclick="shareEvent('Open Mic Night')">Share</button></div></div></article>
+      <article class="event-card" data-scroll><div class="event-banner">BP</div><div class="event-details"><h3>Birthday Packages</h3><p class="event-meta">Daily Slots | Organizer: Event Desk | 12 slots left</p><div data-countdown="2026-06-01T00:00:00"></div><div style="margin-top:10px;"><a class="event-btn" href="book-event.html?event=Birthday Package">Register</a> <button class="event-btn" onclick="shareEvent('Birthday Package')">Share</button></div></div></article>
     </div>
   </div>
-</div>
+</section>
 
-<footer class="site-foot">© 2025 Pixel n Plate</footer>
+<footer><div class="container"><div class="footer-divider"><p>&copy; 2026 Pixel n Plate</p></div></div></footer>
+<button class="back-to-top" onclick="scrollToTop()">UP</button>
+<script src="main.js"></script>
 </body>
 </html>
